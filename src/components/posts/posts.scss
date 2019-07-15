@@ -1,0 +1,37 @@
+@import '../../styles/colors.scss';
+
+.posts {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "post"
+    "nav";
+
+  nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post {
+    grid-area: post;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .posts {
+    display: grid;
+    grid-template-columns: 24vw 74vw;
+    grid-template-rows: 86vh;
+    grid-template-areas:
+      "nav post";
+    grid-column-gap: 1vh;
+
+    nav {
+      overflow: scroll;
+      border-radius: 6px;
+      background-color: $light-blue;
+    }
+  }
+}

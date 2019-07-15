@@ -1,0 +1,48 @@
+@import '../../styles/colors.scss';
+
+a.post-list-item {
+  font-family: 'Source Code Pro', monospace;
+  cursor: pointer;
+  text-decoration: none;
+  border-top: 1px solid $dark-grey;
+  overflow: hidden;
+  padding: 8px;
+
+  .post-title {
+    color: $dark-blue;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .post-date {
+    font-size: 0.9rem;
+    color: $dark-grey;
+  }
+
+  &.active {
+    background-color: $light-purple;
+
+    .post-title {
+      color: white;
+    }
+
+    .post-date {
+      color: $light-grey;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  a.post-list-item {
+    padding: 16px 8px;
+    border: none;
+
+    &:hover {
+      background-color: $light-purple;
+      .post-date {
+        font-size: 0.9rem;
+        color: $light-grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@import '../../styles/colors.scss';
+
+article {
+  width: 100%;
+
+  .article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .post-controls {
+      display: flex;
+      border: 1px solid $dark-grey;
+      border-radius: 8px;
+      padding: 4px;
+      color: $dark-grey;
+
+      .post-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        width: 33%;
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 8px 16px;
+      }
+    }
+
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    .feather {
+      margin: 0 6px;
+      color: $dark-green;
+      font-size: 1.3rem;
+    }
+
+    .by {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.3rem;
+      color: $light-red;
+      margin: 0 4px;
+    }
+
+    .post-author, .post-date {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.9rem;
+    }
+  }
+
+  .article-content {
+    font-family: 'Song Myung', serif;
+    margin-top: 32px;
+
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.8rem; }
+    h4 { font-size: 1.6rem; }
+    h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.4rem; }
+
+    p {
+      font-size: 1.2rem;
+      margin: 16px 0;
+      padding: 4px;
+      line-height: normal;
+
+      code {
+        background-color: $dark-grey;
+        padding: 4px;
+        border-radius: 2px;
+        white-space: nowrap;
+        color: $light-blue;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $light-purple;
+
+      &:hover, a:active {
+        color: $light-blue;
+      }
+    }
+
+    pre {
+      padding: 8px;
+      border-radius: 4px;
+      overflow: scroll;
+      background-color: $dark-grey;
+      color: $light-blue;
+
+      code {
+        width: 100%;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 1rem;
+        line-height: 1.7rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  article {
+    .article-header {
+      .post-controls {
+        .post-control {
+          font-size: 1.4rem;
+          padding: 8px;
+
+          &:hover {
+            color: $light-purple;
+
+            &.delete {
+              color: $light-red;
+            }
+          }
+        }
+      }
+
+      h1 {
+        font-size: 3.3rem;
+      }
+
+      .feather {
+        margin: 0 12px;
+        font-size: 1.8rem;
+      }
+
+      .by {
+        font-size: 1.8rem;
+      }
+
+      .post-author, .post-date {
+        font-size: 1.2rem;
+      }
+    }
+
+    .article-content {
+      margin: 20px;
+      font-size: 1.3rem;
+
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2.2rem; }
+      h3 { font-size: 2rem; }
+      h4 { font-size: 1.8rem; }
+      h5 { font-size: 1.6rem; }
+      h6 { font-size: 1.4rem; }
+
+      p {
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+      }
+    }
+  }
+}
