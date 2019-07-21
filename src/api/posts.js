@@ -11,6 +11,16 @@ const get = async (token) => {
   return posts;
 };
 
+const del = async (postId, token) => {
+  if (!token) return;
+  const opts = {
+    method: 'DELETE',
+    headers: { ...headers.json(), ...headers.auth(token) },
+  };
+  const res = await fetch(urls.post(postId), opts);
+};
+
 export {
   get,
+  del,
 };

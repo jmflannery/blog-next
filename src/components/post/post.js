@@ -1,10 +1,18 @@
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faEdit, faTrashAlt, faFeather } from '@fortawesome/free-solid-svg-icons';
+import * as api from '../../api/api';
 import './post.scss';
+import Router from 'next/router';
 
 const Post = (props) => {
   let publishedClass = `post-control publish-button${props.post.published_at ? ' published' : ''}`
+
+  const handleDelete = () => {
+    api.posts.del(props.post.id, props.token);
+    Router.push('/');
+  };
+
   return (
     <article>
       <div className="article-header">
@@ -18,7 +26,7 @@ const Post = (props) => {
             <div className="post-control" >
               <FontAwesomeIcon icon={faEdit} />
             </div>
-            <div className="post-control delete">
+            <div className="post-control delete" onClick={handleDelete}>
               <FontAwesomeIcon icon={faTrashAlt} />
             </div>
           </div>}
