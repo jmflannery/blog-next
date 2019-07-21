@@ -10,7 +10,7 @@ const Index = (props) => {
 
   return (
     <Blog title="Jack's Blog" currentUser={props.currentUser} token={props.token}>
-      <Posts posts={props.posts} />
+      <Posts currentUser={props.currentUser} token={props.token} posts={props.posts} />
     </Blog>
   );
 };

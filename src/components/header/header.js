@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Router from 'next/router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { logout } from '../../actions/sessions';
 import './header.scss';
 
@@ -13,7 +15,7 @@ const Header = (props) => {
     <header>
       <div className="side-a">
         <div className="icon">
-          <i className="fas fa-code"></i>
+          <FontAwesomeIcon icon={faCode} />
         </div>
         <div className="blog-title">
           <span className="domain">blog.</span>

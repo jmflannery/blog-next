@@ -15,7 +15,7 @@ const PostPage = (props) => {
 
   return (
     <Blog title={post.title} currentUser={props.currentUser} token={props.token}>
-      <Posts posts={props.posts} post={post} />
+      <Posts currentUser={props.currentUser} token={props.token} posts={props.posts} post={post} />
     </Blog>
   );
 };

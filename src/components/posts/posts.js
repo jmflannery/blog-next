@@ -5,7 +5,7 @@ import './posts.scss';
 const Posts = (props) => (
   <div className="posts">
     <PostList posts={props.posts} />
-    {props.post ? <Post post={props.post} /> : null}
+    {props.post ? <Post post={props.post} currentUser={props.currentUser} token={props.token} /> : null}
   </div>
 );
 
