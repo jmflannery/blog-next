@@ -1,23 +1,30 @@
-import * as api from '../src/api/api';
+import * as api from '../src/api';
 import Blog from '../src/components/blog/blog';
 import Posts from '../src/components/posts/posts';
-import { loginWithToken } from '../src/actions/sessions';
+import {loginWithToken} from '../src/actions/sessions';
 
-const Index = (props) => {
+const Index = props => {
   if (!props.posts) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   return (
-    <Blog title="Jack's Blog" currentUser={props.currentUser} token={props.token}>
-      <Posts currentUser={props.currentUser} token={props.token} posts={props.posts} />
+    <Blog
+      title="Jack's Blog"
+      currentUser={props.currentUser}
+      token={props.token}>
+      <Posts
+        currentUser={props.currentUser}
+        token={props.token}
+        posts={props.posts}
+      />
     </Blog>
   );
 };
 
-Index.getInitialProps = async (ctx) => {
+Index.getInitialProps = async ctx => {
   const [currentUser, token] = await loginWithToken(ctx);
-  const { posts } = await api.posts.get(token);
+  const {posts} = await api.posts.get(token);
   return {
     posts,
     currentUser,
