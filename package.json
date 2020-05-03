@@ -1,10 +1,10 @@
 {
-  "name": "blog.jackflannery.me",
+  "name": "blog.jackflannery.com",
   "version": "0.0.1",
   "description": "Jack Flannery's blog made with Next.js ",
   "main": "index.js",
   "repository": "github.com/jmflannery/blog-next",
-  "author": "Jack Flannery <jmflannery81@gmail.com> (http://jackflannery.me)",
+  "author": "Jack Flannery <jmflannery81@gmail.com> (http://jackflannery.com)",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@zeit/next-sass": "^1.0.1",
+    "date-fns": "^2.9.0",
     "isomorphic-unfetch": "^3.0.0",
     "js-cookie": "^2.2.0",
     "next": "^9.0.1",
