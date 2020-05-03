@@ -1,5 +1,5 @@
 import nextCookie from 'next-cookies';
-import * as api from '../api/api';
+import * as api from '../api';
 
 export const LOGGED_IN = 'LOGGED_IN';
 
@@ -14,12 +14,13 @@ export const login = async (email, password) => {
 };
 
 export const loginWithToken = async (ctx) => {
-  const { token } = nextCookie(ctx);
-  let currentUser; let nextToken;
+  const {token} = nextCookie(ctx);
+  let currentUser;
+  let nextToken;
 
   if (token) {
     [currentUser, nextToken] = await api.sessions.signInWithToken(token);
-    return [currentUser, nextToken]
+    return [currentUser, nextToken];
   }
   return [];
 };
