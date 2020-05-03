@@ -1,12 +1,11 @@
 const protocol = 'http';
-// const host = "api.jackflannery.me";
-const host = 'localhost:3000';
-const baseApi = `${protocol}://${host}`;
+const domain = 'api.jackflannery.com';
+const baseUrl = `${protocol}://${domain}`;
 
-const posts = `${baseApi}/posts?type=list`;
-const post = postId => `${baseApi}/posts/${postId}`;
-const publishPost = postId => `${baseApi}/posts/${postId}/publish`;
-const login = `${baseApi}/login`;
-const logout = `${baseApi}/logout`;
+const posts = `${baseUrl}/posts?type=list`;
+const post = (postId) => `${baseUrl}/posts/${postId}`;
+const publishPost = (postId) => `${baseUrl}/posts/${postId}/publish`;
+const login = `${baseUrl}/login`;
+const logout = `${baseUrl}/logout`;
 
 export {posts, post, publishPost, login, logout};
