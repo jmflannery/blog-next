@@ -1,22 +1,16 @@
 import * as api from '../../src/api';
 import Blog from '../../src/components/blog/blog';
 import Posts from '../../src/components/posts/posts';
-import {loginWithToken} from '../../src/actions/sessions';
 
-const PostPage = (props) => {
-  const {posts, post} = props;
-
+const BlogPage = ({posts, post}) => {
   return (
-    <Blog title={post.title}>
-      <Posts
-        posts={posts}
-        post={post}
-      />
+    <Blog title={post?.title}>
+      <Posts posts={posts} post={post} />
     </Blog>
   );
 };
 
-export async function getStaticProps({params, preview = false}) {
+export async function getStaticProps({params}) {
   const {post} = await api.post.get(params.slug);
   const {posts} = await api.posts.get();
   return {
@@ -35,4 +29,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default PostPage;
+export default BlogPage;
