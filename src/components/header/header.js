@@ -3,32 +3,34 @@ import Router from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { logout } from '../../actions/sessions';
-import './header.scss';
+import styles from './Header.module.scss';
 
-const Header = (props) => {
+const Header = props => {
   const handleLogout = async () => {
     await logout(props.token);
     Router.push('/');
   };
 
   return (
-    <header>
-      <div className="side-a">
-        <div className="icon">
+    <header className={styles.header}>
+      <div className={styles['side-a']}>
+        <div className={styles.icon}>
           <FontAwesomeIcon icon={faCode} />
         </div>
-        <div className="blog-title">
-          <span className="domain">blog.</span>
-          <span className="name">Jack Flannery</span>
-          <span className="domain">.me</span>
+        <div className={styles['blog-title']}>
+          <span className={styles.name}>Jack Flannery</span>
+          <span className={styles.domain}>.com</span>
         </div>
       </div>
-      <div className="side-b">
-        {props.currentUser && props.token &&
-          <div className="session-controls">
-            <span className="user">{props.currentUser.email}</span>
-            <span className="sign-out" onClick={() => handleLogout()}>Sign Out</span>
-          </div>}
+      <div className={styles['side-b']}>
+        {props.currentUser && props.token && (
+          <div className={styles['session-controls']}>
+            <span className={styles.user}>{props.currentUser.email}</span>
+            <span className={styles['sign-out']} onClick={() => handleLogout()}>
+              Sign Out
+            </span>
+          </div>
+        )}
       </div>
     </header>
   );

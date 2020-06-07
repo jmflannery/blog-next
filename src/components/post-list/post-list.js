@@ -1,13 +1,14 @@
-import PostListItem from './post-list-item';
+import PostListItem from './post-list-item.js';
 
-const PostList = (props) => {
-
-  if (!props.posts) {
-    return <div>Loading...</div>
+const PostList = ({posts}) => {
+  if (!posts) {
+    return <div>Loading...</div>;
   }
   return (
     <nav>
-      {props.posts.map(post => <PostListItem post={post} key={post.id} />)}
+      {posts.map(post => (
+        <PostListItem post={post} key={post.id} />
+      ))}
     </nav>
   );
 };

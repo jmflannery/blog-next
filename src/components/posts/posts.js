@@ -1,9 +1,9 @@
 import PostList from '../post-list/post-list';
 import Post from '../post/post';
-import './posts.scss';
+import styles from './Posts.module.scss';
 
-const Posts = (props) => (
-  <div className="posts">
+const Posts = props => (
+  <div className={styles.posts}>
     <PostList posts={props.posts} />
     {props.post && (
       <Post

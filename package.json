@@ -4,7 +4,7 @@
   "description": "Jack Flannery's blog made with Next.js ",
   "main": "index.js",
   "repository": "github.com/jmflannery/blog-next",
-  "author": "Jack Flannery <jmflannery81@gmail.com> (http://jackflannery.com)",
+  "author": "Jack Flannery <hello@jackflannery.com> (http://jackflannery.com)",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -13,18 +13,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "@zeit/next-sass": "^1.0.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.10",
     "date-fns": "^2.9.0",
     "isomorphic-unfetch": "^3.0.0",
-    "js-cookie": "^2.2.0",
     "next": "^9.0.1",
-    "next-cookies": "^1.1.2",
-    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-markdown": "^4.1.0"
+    "react-markdown": "^4.1.0",
+    "sass": "^1.26.8"
   }
 }

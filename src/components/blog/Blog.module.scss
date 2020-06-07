@@ -10,8 +10,8 @@
   grid-template-columns: 100vw;
   grid-template-rows: 14vh auto;
   grid-template-areas:
-    "header"
-    "main";
+    'header'
+    'main';
 
   header {
     grid-area: header;
@@ -27,8 +27,8 @@
     grid-template-columns: 98vw;
     grid-template-rows: 10vh auto;
     grid-template-areas:
-      "header"
-      "main";
+      'header'
+      'main';
     grid-column-gap: 1vh;
     padding: 1vh;
   }

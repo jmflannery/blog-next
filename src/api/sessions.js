@@ -1,13 +1,13 @@
 import fetch from 'isomorphic-unfetch';
 import * as urls from '../config';
-import cookie from 'js-cookie'
+// import cookie from 'js-cookie'
 import * as headers from './base';
 
 export const signIn = async (email, password) => {
-  const headersObj = { ...headers.login(email, password), ...headers.json() };
+  const headersObj = {...headers.login(email, password), ...headers.json()};
   const opts = {
     method: 'POST',
-    headers: headersObj
+    headers: headersObj,
   };
   let apiToken;
   let currentUser;
@@ -19,7 +19,7 @@ export const signIn = async (email, password) => {
     let authHeader = resp.headers.get('Authorization');
     if (authHeader && authHeader.includes('Token ')) {
       apiToken = authHeader.replace('Token ', '');
-      cookie.set('token', apiToken, { expires: 1 })
+      // cookie.set('token', apiToken, { expires: 1 })
     }
   }
 
@@ -27,10 +27,10 @@ export const signIn = async (email, password) => {
 };
 
 export const signInWithToken = async (token) => {
-  let headersObj = { ...headers.auth(token), ...headers.json() };
+  let headersObj = {...headers.auth(token), ...headers.json()};
   let opts = {
     method: 'PUT',
-    headers: headersObj
+    headers: headersObj,
   };
   let apiToken;
   let currentUser;
@@ -42,7 +42,7 @@ export const signInWithToken = async (token) => {
     let authHeader = resp.headers.get('Authorization');
     if (authHeader && authHeader.includes('Token ')) {
       apiToken = authHeader.replace('Token ', '');
-      cookie.set('token', apiToken, { expires: 1 })
+      // cookie.set('token', apiToken, { expires: 1 })
     }
   }
 
@@ -50,12 +50,12 @@ export const signInWithToken = async (token) => {
 };
 
 export const logout = async (token) => {
-  let headersObj = { ...headers.auth(token), ...headers.json() };
+  let headersObj = {...headers.auth(token), ...headers.json()};
   let opts = {
     method: 'DELETE',
-    headers: headersObj
+    headers: headersObj,
   };
   const resp = await fetch(urls.logout, opts);
-  cookie.remove('token')
+  // cookie.remove('token')
   return resp;
 };

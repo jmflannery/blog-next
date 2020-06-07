@@ -1,6 +1,6 @@
 @import '../../styles/colors.scss';
 
-article {
+.article {
   width: 100%;
 
   .article-header {
@@ -35,21 +35,26 @@ article {
     }
 
     .feather {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 18px;
+      width: 18px;
       margin: 0 6px;
       color: $dark-green;
-      font-size: 1.3rem;
     }
 
     .by {
       font-family: 'Pacifico', cursive;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: $light-red;
       margin: 0 4px;
     }
 
-    .post-author, .post-date {
+    .post-author,
+    .post-date {
       font-family: 'Source Code Pro', monospace;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
 
@@ -57,12 +62,24 @@ article {
     font-family: 'Song Myung', serif;
     margin-top: 32px;
 
-    h1 { font-size: 2.4rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.8rem; }
-    h4 { font-size: 1.6rem; }
-    h5 { font-size: 1.5rem; }
-    h6 { font-size: 1.4rem; }
+    h1 {
+      font-size: 2.4rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 1.6rem;
+    }
+    h5 {
+      font-size: 1.5rem;
+    }
+    h6 {
+      font-size: 1.4rem;
+    }
 
     p {
       font-size: 1.2rem;
@@ -83,7 +100,8 @@ article {
       text-decoration: none;
       color: $light-purple;
 
-      &:hover, a:active {
+      &:hover,
+      a:active {
         color: $light-blue;
       }
     }
@@ -106,7 +124,7 @@ article {
 }
 
 @media only screen and (min-width: 768px) {
-  article {
+  .article {
     .article-header {
       .post-controls {
         .post-control {
@@ -128,15 +146,16 @@ article {
       }
 
       .feather {
-        margin: 0 12px;
-        font-size: 1.8rem;
+        height: 32px;
+        width: 32px;
       }
 
       .by {
         font-size: 1.8rem;
       }
 
-      .post-author, .post-date {
+      .post-author,
+      .post-date {
         font-size: 1.2rem;
       }
     }
@@ -145,12 +164,24 @@ article {
       margin: 20px;
       font-size: 1.3rem;
 
-      h1 { font-size: 2.6rem; }
-      h2 { font-size: 2.2rem; }
-      h3 { font-size: 2rem; }
-      h4 { font-size: 1.8rem; }
-      h5 { font-size: 1.6rem; }
-      h6 { font-size: 1.4rem; }
+      h1 {
+        font-size: 2.6rem;
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.8rem;
+      }
+      h5 {
+        font-size: 1.6rem;
+      }
+      h6 {
+        font-size: 1.4rem;
+      }
 
       p {
         font-size: 1.3rem;

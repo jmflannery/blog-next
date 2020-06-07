@@ -1,4 +1,3 @@
-import nextCookie from 'next-cookies';
 import * as api from '../api';
 
 export const LOGGED_IN = 'LOGGED_IN';
@@ -13,17 +12,17 @@ export const login = async (email, password) => {
   return await api.sessions.signIn(email, password);
 };
 
-export const loginWithToken = async (ctx) => {
-  const {token} = nextCookie(ctx);
-  let currentUser;
-  let nextToken;
+// export const loginWithToken = async (ctx) => {
+//   const {token} = nextCookie(ctx);
+//   let currentUser;
+//   let nextToken;
 
-  if (token) {
-    [currentUser, nextToken] = await api.sessions.signInWithToken(token);
-    return [currentUser, nextToken];
-  }
-  return [];
-};
+//   if (token) {
+//     [currentUser, nextToken] = await api.sessions.signInWithToken(token);
+//     return [currentUser, nextToken];
+//   }
+//   return [];
+// };
 
 export const logout = async (token) => {
   return await api.sessions.logout(token);
