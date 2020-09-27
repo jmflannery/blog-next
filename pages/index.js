@@ -1,9 +1,7 @@
-const Index = (props) => {
-  return (
-    <div>
-      <span>Welcome to JackFlannery.com</span>
-    </div>
-  );
-}
+import Home from '../src/components/home/home';
+
+const Index = props => {
+  return <Home />;
+};
 
 export default Index;

@@ -1,0 +1,95 @@
+.container {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 15vh 35vh auto;
+  grid-template-areas:
+    'info'
+    'pics'
+    'main';
+
+  height: 100%;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#3c91e6, #eb5e55);
+
+  .info {
+    grid-area: info;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .name {
+      font-size: 48px;
+      font-family: 'Trade Winds';
+      color: white;
+      transform: rotate(-6deg);
+    }
+  }
+
+  .pics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pic {
+      height: 64%;
+      width: 78%;
+      border: 18px solid white;
+      transform: rotate(6deg);
+    }
+  }
+
+  .main {
+    grid-area: main;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .bio {
+      background-color: rgb(22, 20, 20, 0.38);
+      height: 100%;
+      width: 88%;
+      border-radius: 14px;
+      padding: 12px;
+
+      .bioParagraph {
+        font-family: 'Source Code Pro';
+        font-size: 14px;
+        line-height: 1.8rem;
+        color: white;
+        padding: 0;
+        margin: 0 0 16px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 50vh auto;
+    grid-template-areas:
+      'info pics'
+      'main main';
+
+    .info {
+      .name {
+        font-size: 72px;
+      }
+    }
+
+    .main {
+      .bio {
+        height: 88%;
+        width: 94%;
+        padding: 16px;
+
+        .bioParagraph {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
