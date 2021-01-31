@@ -5,10 +5,12 @@ import styles from './IconButton.module.css';
 
 const IconButton = ({href, text, children}) => (
   <Link href={href}>
-    <div className={styles.container}>
-      {children}
-      <span className={styles.text}>{text}</span>
-    </div>
+    <a>
+      <div className={styles.container}>
+        {children}
+        <span className={styles.text}>{text}</span>
+      </div>
+    </a>
   </Link>
 );
 
