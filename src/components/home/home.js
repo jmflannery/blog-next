@@ -1,8 +1,8 @@
 import React from 'react';
 import IconButton from '../icon-button';
-import BlogIcon from '../../../src/components/icons/blog';
 import GithubIcon from '../../../src/components/icons/github';
-import ResumeIcon from '../../../src/components/icons/resume';
+import RoboBlogIcon from '../../../src/components/icons/robo-blog';
+import RobotIcon from '../../../src/components/icons/robot';
 import SocialismIcon from '../../../src/components/icons/socialism';
 import TwitterIcon from '../../../src/components/icons/twitter';
 
@@ -14,7 +14,7 @@ const buttons = [
   {
     text: 'Blog',
     href: '/blog',
-    component: BlogIcon,
+    component: RoboBlogIcon,
   },
   {
     text: 'Github',
@@ -24,7 +24,7 @@ const buttons = [
   {
     text: 'Resume',
     href: '/resume',
-    component: ResumeIcon,
+    component: RobotIcon,
   },
   {
     text: 'Twitter',
@@ -45,6 +45,7 @@ const Home = () => {
         </div>
         <div className={styles.header}>
           <h1 className={styles.name}>{profile.name}</h1>
+          <p className={styles.title}>{profile.title}</p>
           <div className={styles.buttonWrapper}>
             {buttons.map((button, index) => {
               const IconComponent = button.component;

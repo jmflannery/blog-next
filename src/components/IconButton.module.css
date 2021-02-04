@@ -15,27 +15,33 @@
 .text {
   color: white;
   font-family: 'Source Code Pro';
-  font-size: 16px;
-  margin-top: 14px;
+  font-size: 14px;
+  margin-top: 12px;
 }
 
 @media only screen and (min-width: 600px) {
+  .text {
+    font-size: 16px;
+    margin-top: 14px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .text {
+    font-size: 18px;
+    margin-top: 16px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
   .text {
     font-size: 20px;
     margin-top: 18px;
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1248px) {
   .text {
     font-size: 22px;
-    margin-top: 22px;
-  }
-}
-
-@media only screen and (min-width: 1100px) {
-  .text {
-    font-size: 24px;
-    margin-top: 24px;
   }
 }

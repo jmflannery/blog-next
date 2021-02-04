@@ -56,13 +56,18 @@
 }
 
 .name {
-  font-size: 38px;
-  font-family: 'Trade Winds';
-  font-weight: normal;
+  font-family: 'Rubik Mono One';
+  font-size: 28px;
   color: #ffffff;
-  transform: rotate(-4deg);
-  padding-bottom: 16px;
-  vertical-align: text-top;
+}
+
+.title {
+  font-family: 'Marck Script';
+  font-size: 20px;
+  color: #ffffff;
+  transform: rotate(-2deg);
+  margin-top: -2px;
+  padding-bottom: 12px;
 }
 
 .bio {
@@ -70,14 +75,14 @@
   border-radius: 14px;
   padding: 12px;
   margin-bottom: 16px;
-  box-sizing: border-box;
 }
 
 .bioParagraph {
-  font-family: 'Source Code Pro';
+  font-family: 'Literata';
+  font-weight: 400;
   color: #ffffff;
-  font-size: 16px;
-  line-height: 1.8rem;
+  font-size: 18px;
+  line-height: 1.6em;
   margin-bottom: 12px;
 }
 
@@ -101,8 +106,13 @@
   }
 
   .name {
-    font-size: 68px;
-    padding-bottom: 24px;
+    font-size: 48px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-top: -6px;
+    padding-bottom: 16px;
   }
 
   .pics {
@@ -119,7 +129,7 @@
   }
 
   .bioParagraph {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 2rem;
     margin-bottom: 14px;
   }
@@ -147,7 +157,11 @@
   }
 
   .name {
-    font-size: 72px;
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 30px;
   }
 
   .buttonWrapper {
@@ -155,8 +169,8 @@
   }
 
   .iconButton {
-    height: 72px;
-    width: 72px;
+    height: 60px;
+    width: 60px;
   }
 
   .main {
@@ -174,7 +188,7 @@
   }
 
   .bioParagraph {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 16px;
   }
 
@@ -201,18 +215,18 @@
     padding: 0 42px 42px 42px;
   }
 
-  .name {
-    padding-bottom: 42px;
-  }
-
   .pic {
     height: 420px;
     width: 420px;
   }
 
+  .title {
+    padding-bottom: 32px;
+  }
+
   .iconButton {
-    height: 96px;
-    width: 96px;
+    height: 72px;
+    width: 72px;
   }
 
   .bio {
@@ -222,8 +236,8 @@
 
   .bioParagraph {
     font-size: 24px;
+    line-height: 2.5rem;
     margin-bottom: 20px;
-    line-height: 2.1rem;
   }
 
   .footerIcon {
@@ -237,11 +251,15 @@
   }
 
   .name {
-    font-size: 92px;
+    font-size: 63px;
+  }
+
+  .title {
+    font-size: 32px;
   }
 
   .iconButton {
-    height: 112px;
-    width: 112px;
+    height: 96px;
+    width: 96px;
   }
 }

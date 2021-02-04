@@ -1,6 +1,10 @@
 const profile = {
   name: 'Jack Flannery',
 
+  title: 'Full Stack Web Developer',
+
+  blogTitle: "Jack's Weblog",
+
   images: {
     meAndOliviaRedBow: {
       src:
